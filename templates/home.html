@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hello there</h1>
+    <form method="POST" action="{{ url_for('home') }}">
+        <p>{{ form.name(placeholder='enter your name') }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
+    {{ name }}
+    <p>Hello there</p>
+    {% for user in users %}
+    <p>{{ user.name }}</p>
+    {% endfor %}
+</body>
+</html>
