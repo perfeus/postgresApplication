@@ -8,7 +8,7 @@
     <h1>Hello there</h1>
     <form method="POST" action="{{ url_for('home') }}">
         <p>{{ form.name(placeholder='enter your name') }}</p>
-        <p>{{ form.submit }}</p>
+        <p>It is very nice to see you, {{ form.submit }}</p>
     </form>
     {{ name }}
     <p>Hello there</p>
