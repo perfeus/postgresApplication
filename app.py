@@ -23,7 +23,8 @@ db = SQLAlchemy(app)
 # Создаем объект поддержки миграций
 migrate = Migrate(app, db)
 
-#Модель для хранения визитов нашей страницы
+
+# Модель для хранения визитов нашей страницы
 class Visit(db.Model):
     # Таблица
     __tablename__ = 'names'
@@ -32,9 +33,11 @@ class Visit(db.Model):
     # Имя пользователя
     name = db.Column(db.String, nullable=False)
 
+
 class FirstForm(FlaskForm):
     name = StringField("Name", [InputRequired()])
     submit = SubmitField("Submit")
+
 
 # Наша единственная страница
 @app.route('/', methods=["POST", "GET"])
@@ -52,4 +55,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
